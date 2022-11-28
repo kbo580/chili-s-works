@@ -130,7 +130,7 @@ img {
 /* -------------------------------------------- */
 .garelly {
   padding-top: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
 }
 .garelly .select,
 .garelly input {
@@ -181,11 +181,11 @@ img {
 }
 .garelly__body {
   width: 100%;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
 }
 .garelly__item {
   width: 49%;
-  margin-bottom: 10px;
+  padding: 10px 5px 0px 5px;
   -webkit-transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
   transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
   transition: filter 0.4s, transform 0.4s;
@@ -205,6 +205,10 @@ img {
 }
 
 @media screen and (min-width: 765px) {
+  .garelly {
+    padding-top: 40px;
+    padding-bottom: 100px;
+  }
   .garelly .select,
 .garelly input {
     padding: 8px 38px 8px 8px;
@@ -225,38 +229,38 @@ img {
     width: 32%;
   }
 }
+@media screen and (min-width: 962px) {
+  .garelly__item {
+    width: 24%;
+  }
+}
 /* -------------------------------------------- */
 /* about */
 /* -------------------------------------------- */
 .about {
-  padding-top: 80px;
-  padding-bottom: 150px;
+  padding: 80px 15px;
 }
 .about__wrap {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
 }
 .about__image {
-  width: 48%;
+  width: 100%;
   border-radius: 40px;
 }
 .about__image img {
   border-radius: 40px;
 }
 .about__body {
-  width: 55.6%;
-  position: absolute;
-  top: 50%;
-  right: 0;
+  width: 100%;
+  margin-top: 30px;
 }
 .about__name {
   font-weight: bold;
   font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .about__text {
   margin-top: 20px;
@@ -275,6 +279,35 @@ img {
   margin-right: 4px;
 }
 
+@media (min-width: 765px) {
+  .about {
+    padding: 0 15px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+  }
+  .about__wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about__image {
+    width: 48%;
+  }
+  .about__body {
+    width: 55.6%;
+    margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+  .about__name {
+    font-size: 1.25rem;
+  }
+}
 /* -------------------------------------------- */
 /* footer */
 /* -------------------------------------------- */
@@ -295,7 +328,6 @@ img {
 
 .copy {
   font-size: 0.75rem;
-  margin-top: 10px;
 }
 
 /* -------------------------------------------- */

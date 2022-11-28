@@ -65,10 +65,6 @@ $(function(){
       percentPosition: true,
       columnWidth: '.garelly__item',
       itemSelector: '.garelly__item',
-      gutter: 10,
-      // fitWidth: true,
-      //水平方向の左から右の順序をできるだけ維持
-      // horizontalOrder: true,
     });
   });
 

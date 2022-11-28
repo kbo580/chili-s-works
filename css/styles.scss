@@ -158,7 +158,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 /* -------------------------------------------- */
 .garelly{
   padding-top: 40px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
   // background: #FFFEF8;
   // background:lightblue;
 
@@ -216,12 +216,13 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   //ギャラリー
   &__body {
     width: 100%;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
   }
 
   &__item {
     width: 49%;
-    margin-bottom: 10px;
+    padding: 10px 5px 0px 5px;
+    // margin-bottom: 10px;
     transition: filter .4s, transform .4s;
     cursor: pointer;
 
@@ -240,6 +241,9 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 
 @media screen and (min-width: 765px) {
   .garelly{
+    padding-top: 40px;
+    padding-bottom: 100px;
+
     //ソートボタン
     .select,
     input{
@@ -267,16 +271,11 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 .garelly__item{
     width: 32%;
   }
-
-
-
-
-
 }
   
 @media screen and (min-width: 962px) {
 .garelly__item {
-    // width: 24%;
+    width: 24%;
   }
 }
 
@@ -284,21 +283,19 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 /* about */
 /* -------------------------------------------- */
 .about{
-  padding-top: 80px;
-  padding-bottom: 150px;
+  padding: 80px 15px;
   // background-color: magenta;
 
   &__wrap{
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    display: flex;
     position: relative;
   }
 
   //画像
   &__image{
-    width: 48%;
+    width: 100%;
     border-radius: 40px;
     
     img{
@@ -308,16 +305,15 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 
   //自己紹介
   &__body{
-    width: 55.6%;
-    position: absolute;
-    top: 50%;
-    right: 0;
+    width: 100%;
+    margin-top: 30px;
   }
 
   //名前
   &__name{
     font-weight: bold;
     font-size: rem(20);
+    font-size: rem(18);
   }
 
   //紹介文
@@ -352,7 +348,38 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 }
 
 @media (min-width: 765px) {
+  .about{
+    padding: 0 15px;
+    padding-top: 80px;
+    padding-bottom: 150px;
 
+    &__wrap{
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      display: flex;
+    }
+
+    //画像
+    &__image{
+      width: 48%;
+    }
+    
+    //自己紹介
+    &__body{
+      width: 55.6%;
+      margin-top: 0px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+    }
+
+    //名前
+    &__name{
+      font-size: rem(20);
+    }
+  }
 
 }
 
@@ -376,7 +403,6 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 
 .copy{
   font-size: rem(12);
-  margin-top: 10px;
 }
 
 @media (min-width: 765px) {
