@@ -1,0 +1,408 @@
+@charset "UTF-8";
+*{
+  box-sizing: border-box;
+}
+
+@function rem($px){
+  @return ($px/16) *1rem;
+}
+
+$accentColor: skyblue;
+$mainColor: #B3D3DB;
+$subColor: #C09768;
+$textColor: #333333;
+
+
+body,h1,h2,h3,h4,h5,p,ul,li,ol,dl,dt,dd,figure,input,textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+  outline:0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-size: rem(14);
+  // font-family:"ヒラギノ丸ゴ ProN";
+  letter-spacing: 0.1em;
+  color:  $textColor;
+
+}
+
+a { 
+  color: inherit;
+  text-decoration: none;
+}
+
+img{
+  max-width:100%;
+  vertical-align: bottom;
+}
+
+
+header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
+  // background-color: rgba(0,200,100,0.1);
+  // border: 1px solid rgba(0,0,0,0.1);
+}
+
+.inner{
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 4%;
+}
+.sec-pad{
+  padding: 100px 0;
+}
+
+/* Hover Event */
+@media (hover: hover){
+  .garelly__item:hover{
+    transform: translateY(-4px);
+  }
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* mv */
+/* -------------------------------------------- */
+.mv{
+  height: 90vh;
+  position: relative;
+}
+
+.screen{
+  background: linear-gradient(rgba(0, 0, 0,0.3), rgba(0, 0, 0, 0.3));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.site-title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  max-width: 750px;
+}
+
+//mvのスライダー
+.mvSwiper {
+  width: 100%;
+  height: 100%;
+
+  .swiper-wrapper {
+
+    .swiper-slide {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .swiper-slide-prev,
+    .swiper-slide-active,
+    .swiper-slide-duplicate-active {
+
+      img{
+        animation: zoom 10s linear 0s 1 normal both;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* garelly */
+/* -------------------------------------------- */
+.garelly{
+  padding-top: 40px;
+  padding-bottom: 100px;
+  // background: #FFFEF8;
+  // background:lightblue;
+
+  //ソートボタン
+  .select,
+  input{
+    padding: 0.6em 2em 0.6em 0.8em;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    appearance: none;
+    border-radius: 50px;
+    background: transparent;
+    border: 2px solid $accentColor;
+    color: $textColor;
+    font-size: 12px;
+  }
+
+  &__sortBtn{
+    display: flex;
+    justify-content: center;
+
+    .select-wrap{
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+    
+      //三角
+      &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 13px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        border-top: 8px solid $accentColor;
+        border-bottom: 0;
+        z-index: -1;
+      }
+    }
+
+     //input
+    .input-wrap{
+      input{
+        width: 100%;
+        max-width: 130px;
+      }
+    }
+  }
+
+  //ギャラリー
+  &__body {
+    width: 100%;
+    margin: 40px auto 0;
+  }
+
+  &__item {
+    width: 49%;
+    margin-bottom: 10px;
+    transition: filter .4s, transform .4s;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+//addClass用
+.opacity{
+  filter: opacity(30%);
+}
+
+@media screen and (min-width: 765px) {
+  .garelly{
+    //ソートボタン
+    .select,
+    input{
+      padding: 8px 38px 8px 8px;
+      font-size: 14px;
+    }
+
+    &__sortBtn{
+      justify-content: center;
+  
+      .select-wrap{
+        margin-right: 40px;
+      
+      }
+  
+       //input
+      .input-wrap{
+        input{
+          max-width:none;
+        }
+      }
+    }
+  }
+
+.garelly__item{
+    width: 32%;
+  }
+
+
+
+
+
+}
+  
+@media screen and (min-width: 962px) {
+.garelly__item {
+    // width: 24%;
+  }
+}
+
+/* -------------------------------------------- */
+/* about */
+/* -------------------------------------------- */
+.about{
+  padding-top: 80px;
+  padding-bottom: 150px;
+  // background-color: magenta;
+
+  &__wrap{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+  }
+
+  //画像
+  &__image{
+    width: 48%;
+    border-radius: 40px;
+    
+    img{
+      border-radius: 40px;
+    }
+  }
+
+  //自己紹介
+  &__body{
+    width: 55.6%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+  }
+
+  //名前
+  &__name{
+    font-weight: bold;
+    font-size: rem(20);
+  }
+
+  //紹介文
+  &__text{
+    margin-top: 20px;
+  }
+}
+
+//sns部分
+.sns-link{
+  &__con{
+    margin-top: 20px;
+  }
+
+  //twitter
+  &__twitter{
+    .fab{
+      color: #06ACEE;
+      margin-right: 4px;
+    }
+  }
+
+  //blog
+  &__blog{
+
+    &-image{
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+  }
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/* footer */
+/* -------------------------------------------- */
+.footer{
+  background-color: $mainColor;
+  border-top: 3px solid $subColor;
+  &__wrap{
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+.privacy{
+  font-size: rem(12);
+  margin-top: 10px;
+  display: block;
+}
+
+.copy{
+  font-size: rem(12);
+  margin-top: 10px;
+}
+
+@media (min-width: 765px) {
+
+
+}
+
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+
+
+@media (min-width: 765px) {
+
+
+}
+
+

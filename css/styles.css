@@ -1,0 +1,306 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, p, ul, li, ol, dl, dt, dd, figure, input, textarea {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  list-style: none;
+  outline: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  color: #333333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 4%;
+}
+
+.sec-pad {
+  padding: 100px 0;
+}
+
+/* Hover Event */
+@media (hover: hover) {
+  .garelly__item:hover {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* mv */
+/* -------------------------------------------- */
+.mv {
+  height: 90vh;
+  position: relative;
+}
+
+.screen {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3)));
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.site-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 100%;
+  max-width: 750px;
+}
+
+.mvSwiper {
+  width: 100%;
+  height: 100%;
+}
+.mvSwiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  overflow: hidden;
+}
+.mvSwiper .swiper-wrapper .swiper-slide-prev img,
+.mvSwiper .swiper-wrapper .swiper-slide-active img,
+.mvSwiper .swiper-wrapper .swiper-slide-duplicate-active img {
+  -webkit-animation: zoom 10s linear 0s 1 normal both;
+          animation: zoom 10s linear 0s 1 normal both;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@-webkit-keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+/* -------------------------------------------- */
+/* garelly */
+/* -------------------------------------------- */
+.garelly {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+.garelly .select,
+.garelly input {
+  padding: 0.6em 2em 0.6em 0.8em;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid skyblue;
+  color: #333333;
+  font-size: 12px;
+}
+.garelly__sortBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.garelly__sortBtn .select-wrap {
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.garelly__sortBtn .select-wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  border-top: 8px solid skyblue;
+  border-bottom: 0;
+  z-index: -1;
+}
+.garelly__sortBtn .input-wrap input {
+  width: 100%;
+  max-width: 130px;
+}
+.garelly__body {
+  width: 100%;
+  margin: 40px auto 0;
+}
+.garelly__item {
+  width: 49%;
+  margin-bottom: 10px;
+  -webkit-transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
+  transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
+  transition: filter 0.4s, transform 0.4s;
+  transition: filter 0.4s, transform 0.4s, -webkit-filter 0.4s, -webkit-transform 0.4s;
+  cursor: pointer;
+}
+.garelly__item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.opacity {
+  -webkit-filter: opacity(30%);
+          filter: opacity(30%);
+}
+
+@media screen and (min-width: 765px) {
+  .garelly .select,
+.garelly input {
+    padding: 8px 38px 8px 8px;
+    font-size: 14px;
+  }
+  .garelly__sortBtn {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .garelly__sortBtn .select-wrap {
+    margin-right: 40px;
+  }
+  .garelly__sortBtn .input-wrap input {
+    max-width: none;
+  }
+  .garelly__item {
+    width: 32%;
+  }
+}
+/* -------------------------------------------- */
+/* about */
+/* -------------------------------------------- */
+.about {
+  padding-top: 80px;
+  padding-bottom: 150px;
+}
+.about__wrap {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.about__image {
+  width: 48%;
+  border-radius: 40px;
+}
+.about__image img {
+  border-radius: 40px;
+}
+.about__body {
+  width: 55.6%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+.about__name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.about__text {
+  margin-top: 20px;
+}
+
+.sns-link__con {
+  margin-top: 20px;
+}
+.sns-link__twitter .fab {
+  color: #06ACEE;
+  margin-right: 4px;
+}
+.sns-link__blog-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+}
+
+/* -------------------------------------------- */
+/* footer */
+/* -------------------------------------------- */
+.footer {
+  background-color: #B3D3DB;
+  border-top: 3px solid #C09768;
+}
+.footer__wrap {
+  text-align: center;
+  padding: 20px;
+}
+
+.privacy {
+  font-size: 0.75rem;
+  margin-top: 10px;
+  display: block;
+}
+
+.copy {
+  font-size: 0.75rem;
+  margin-top: 10px;
+}
+
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/*  */
+/* -------------------------------------------- */
