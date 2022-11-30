@@ -182,15 +182,21 @@ img {
 .garelly__body {
   width: 100%;
   margin: 30px auto 0;
+  -webkit-columns: 2;
+     -moz-columns: 2;
+          columns: 2;
 }
 .garelly__item {
-  width: 49%;
-  padding: 10px 5px 0px 5px;
+  margin-bottom: 15px;
   -webkit-transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
   transition: -webkit-filter 0.4s, -webkit-transform 0.4s;
   transition: filter 0.4s, transform 0.4s;
   transition: filter 0.4s, transform 0.4s, -webkit-filter 0.4s, -webkit-transform 0.4s;
   cursor: pointer;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
+  display: block;
 }
 .garelly__item img {
   width: 100%;
@@ -225,13 +231,17 @@ img {
   .garelly__sortBtn .input-wrap input {
     max-width: none;
   }
-  .garelly__item {
-    width: 32%;
+  .garelly__body {
+    -webkit-columns: 3;
+       -moz-columns: 3;
+            columns: 3;
   }
 }
 @media screen and (min-width: 962px) {
-  .garelly__item {
-    width: 24%;
+  .garelly__body {
+    -webkit-columns: 4;
+       -moz-columns: 4;
+            columns: 4;
   }
 }
 /* -------------------------------------------- */

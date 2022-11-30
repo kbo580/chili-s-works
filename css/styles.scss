@@ -217,14 +217,15 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   &__body {
     width: 100%;
     margin: 30px auto 0;
+    columns: 2;
   }
 
   &__item {
-    width: 49%;
-    padding: 10px 5px 0px 5px;
-    // margin-bottom: 10px;
+    margin-bottom: 15px;
     transition: filter .4s, transform .4s;
     cursor: pointer;
+    break-inside: avoid;
+    display: block;
 
     img{
       width: 100%;
@@ -243,6 +244,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   .garelly{
     padding-top: 40px;
     padding-bottom: 100px;
+    
 
     //ソートボタン
     .select,
@@ -256,7 +258,6 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
   
       .select-wrap{
         margin-right: 40px;
-      
       }
   
        //input
@@ -266,16 +267,19 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
         }
       }
     }
-  }
 
-.garelly__item{
-    width: 32%;
+    //ギャラリー
+    &__body {
+      columns: 3;
+    }
   }
 }
   
 @media screen and (min-width: 962px) {
-.garelly__item {
-    width: 24%;
+  .garelly{
+    &__body{
+      columns: 4;
+    }
   }
 }
 
@@ -430,5 +434,7 @@ header,main,section,footer, div, ul, li, h1,h2,h3,dl,dt,dd{
 
 
 }
+
+
 
 

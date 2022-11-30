@@ -60,13 +60,16 @@ $(function(){
 
   });
 
-  var $grid = $('.garelly__body').imagesLoaded(function(){
-    $grid.masonry({
-      percentPosition: true,
-      columnWidth: '.garelly__item',
-      itemSelector: '.garelly__item',
-    });
-  });
+  // var $grid = $('.garelly__body').imagesLoaded(function(){
+  //   $grid.masonry({
+  //     percentPosition: true,
+  //     columnWidth: '.garelly__item',
+  //     itemSelector: '.garelly__item',
+  //   });
+  // });
+
+
+  
 
 
 
